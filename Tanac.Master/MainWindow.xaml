@@ -1,0 +1,395 @@
+﻿<Window x:Class="Tanac.Master.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Tanac.Master"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"  
+        WindowState="Maximized"
+        ResizeMode="CanResize"
+        Icon="/logo.ico"
+        Title="运动控制演示程序" Height="450" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="265*" />
+            <RowDefinition Height="692*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <ToolBarTray  Grid.Row="0" >
+            <ToolBar 
+                    Style="{DynamicResource MaterialDesignToolBar}"
+                    ClipToBounds="False">
+                <Viewbox HorizontalAlignment="Right" Height="50" Panel.ZIndex="2" Margin="5,5,15,5">
+                    <TextBlock Text="Tanac"/>
+                </Viewbox>
+                <Separator />
+                <Button Command="{Binding LoginCommand}"
+                    ToolTip="登录软件"
+                    >
+                    <materialDesign:PackIcon Kind="UserMultiple" Foreground="#FF03B8AF"/>
+                </Button>
+
+                <Separator />
+                <Button
+                         Command="{Binding SaveCommand}"
+                         ToolTip="保存方案"
+                         ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon Kind="ContentSave" Foreground="#FF03B8AF"/>
+                </Button>
+                <Separator />
+                <Button                    
+                    ToolTip="启动" Command="{Binding StartCommand}"
+                    ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon Kind="PlayArrow" Foreground="Green"/>
+                </Button>
+                <Separator />
+                <Button  ToolTip="暂停"  Command="{Binding PauseCommand}"
+                         ToolBar.OverflowMode="AsNeeded" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Content">
+                                <Setter.Value>
+                                    <materialDesign:PackIcon Kind="Pause" Foreground="#FF03B8AF"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding PauseState,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Value="True">
+                                    <Setter Property="Content">
+                                        <Setter.Value>
+                                            <materialDesign:PackIcon Kind="PlayCircleOutline" Foreground="#FF03B8AF"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                </Button>
+
+                <Separator />
+                <Button  ToolTip="复位" 
+                         Command="{Binding IntialCommand}"
+                         ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon Kind="Restart" Foreground="YellowGreen"/>
+                </Button>
+                <Separator />
+                <Button   ToolTip="停止"
+                          Command="{Binding StopCommand}"
+                          ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon Kind="StopCircleOutline" Foreground="Red"/>
+                </Button>
+                <Separator />
+                <Label Margin="10"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                <Separator />
+                <Label Margin="10" Content="总数" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                    <Label.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="总数清零" Command="{Binding ProjectManger.AllCountClearCommand}">
+                            </MenuItem>
+                        </ContextMenu>
+                    </Label.ContextMenu>
+                </Label>
+                <Label Margin="10" Content="{Binding ProjectManger.AllCount,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">
+                </Label>
+                <Separator />
+                <Label Margin="10" Content="NG数" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="NG计数清零" Command="{Binding ProjectManger.ThresholdCountClearCommand}"/>
+                        </ContextMenu>
+                    </Label.ContextMenu>
+                </Label>
+                <Label Margin="10" Content="{Binding ProjectManger.ThresholdCount,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="30"/>
+            </ToolBar>
+        </ToolBarTray>
+        <Grid Grid.Row="1" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*"/>
+                    <RowDefinition Height="0.4*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Header="演示工位视图" Grid.ColumnSpan="2" Grid.RowSpan="2" Style="{DynamicResource MaterialDesignGroupBox}" 
+                          IsEnabled="{Binding Sysmanger.LoginViewModel.OperatorLv,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="117*"/>
+                            <ColumnDefinition Width="565*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label FontSize="30" Content="{Binding CodeResult,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" DataContext="{Binding ProjectManger.FindCodeViewModel,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" HorizontalContentAlignment="Center" Grid.Column="1" Margin="220,0,0,0"/>
+                    </Grid>
+
+                </GroupBox>
+
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.65*"/>
+                    <RowDefinition Height="0.35*"/>
+                </Grid.RowDefinitions>
+
+                <GroupBox Header="工位操作区域" >
+                    <TabControl Grid.Row="0">
+                        <TabItem Header="轴参数">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.75*"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <DataGrid AutoGenerateColumns="False" ColumnWidth="auto" Grid.Row="0"
+                                          ItemsSource="{Binding AxisItems}"
+                                          SelectedItem="{Binding SeletedAxisItem}"
+                                          >
+                                    <DataGrid.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="使能" Command="{Binding ServoOnCommand}"/>
+                                            <MenuItem Header="全部使能" Command="{Binding AllServoOnCommand}"/>
+                                            <MenuItem Header="断开使能" Command="{Binding ServoOffCommand}"/>
+                                            <MenuItem Header="状态清零" Command="{Binding WarningClearCommand}"/>
+                                            <MenuItem Header="报警清除" Command="{Binding DeviceWarningClearCommand}"/>
+                                            <MenuItem Header="回零" Command="{Binding GoHomeCommand}"/>
+                                            <MenuItem Header="全部回零" Command="{Binding AllGoHomeCommand}"/>
+                                        </ContextMenu>
+                                    </DataGrid.ContextMenu>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="轴名" Binding="{Binding AxisName}" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="轴号" Binding="{Binding AxisIndex}" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="卡号" Binding="{Binding AxisCard}" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="规划位置(mm)" Binding="{Binding PrfPos,StringFormat=f3}" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="反馈位置(mm)" Binding="{Binding EncPos,StringFormat=f3}" IsReadOnly="True"/>
+
+                                        <DataGridTextColumn Header="回零速度(mm/s)" Binding="{Binding HomeSpeed}"/>
+                                        <DataGridTextColumn Header="分辨率(p/mm)" Binding="{Binding Resolution,StringFormat=f2}"/>
+                                        <DataGridTextColumn Header="移动速度(mm/s)" Binding="{Binding MoveVel,StringFormat=f2}"/>
+                                        <DataGridTextColumn Header="点动速度(mm/s)" Binding="{Binding JogVel,StringFormat=f2}"/>
+                                        <DataGridTextColumn Header="加速度(mm/s²)" Binding="{Binding AxisAcc,StringFormat=f2}"/>
+                                        <DataGridTextColumn Header="减速度(mm/s²)" Binding="{Binding AxisDec,StringFormat=f2 }"/>
+
+                                        <DataGridTemplateColumn Header="使能" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox  Style="{StaticResource IOStyle}" IsChecked="{Binding ServerStatus}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="报警" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox Style="{StaticResource IOStyle}"  IsChecked="{Binding AlarmStatus}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="运动" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox Style="{StaticResource IOStyle}"  IsChecked="{Binding SportState}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="电机到位" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox  Style="{StaticResource IOStyle}" IsChecked="{Binding InSpaceState}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="急停" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox  Style="{StaticResource IOStyle}" IsChecked="{Binding EmergStopState}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="正限位" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox Style="{StaticResource IOStyle}"  IsChecked="{Binding PLimitState}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="负限位" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox  Style="{StaticResource IOStyle}" IsChecked="{Binding NLimitState}" IsEnabled="False"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="目标位置：" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0"/>
+                                    <TextBox Grid.Column="1" Text="{Binding TargetPos,StringFormat=f3}" VerticalAlignment="Center" Cursor="Arrow"/>
+                                    <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                        <Button Content="绝对定位" Margin="5,0,0,0" 
+                                                HorizontalAlignment="Center" 
+                                                Command="{Binding MoveAxisCommand}" CommandParameter="3"
+                                                Cursor="Hand"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                        <Button Content="正向点动" Margin="5,0,0,0"  HorizontalAlignment="Center"  Cursor="Hand">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                                    <i:InvokeCommandAction Command="{Binding MoveAxisCommand}" CommandParameter="1"/>
+                                                </i:EventTrigger>
+                                                <i:EventTrigger EventName="PreviewMouseLeftButtonUp">
+                                                    <i:InvokeCommandAction Command="{Binding MoveAxisCommand}" CommandParameter="0" />
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                        <Button Content="反向点动"  Margin="5,0,0,0" HorizontalAlignment="Center"  Cursor="Hand">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                                    <i:InvokeCommandAction Command="{Binding MoveAxisCommand}" CommandParameter="2"/>
+                                                </i:EventTrigger>
+                                                <i:EventTrigger EventName="PreviewMouseLeftButtonUp">
+                                                    <i:InvokeCommandAction Command="{Binding MoveAxisCommand}" CommandParameter="0" />
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="IO状态">
+                            <DataGrid Grid.Row="0"  Background="#FFF7F4F4" AutoGenerateColumns="False" CanUserSortColumns="False" CanUserAddRows="False" IsEnabled="{Binding RelativeSource={ RelativeSource  AncestorLevel=1, AncestorType={x:Type Window},Mode=FindAncestor},Path=DataContext.Sysmanger.LoginViewModel.EngineerLv,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                            ColumnWidth="auto"
+                                          ItemsSource="{Binding IOItems}"
+                                          SelectedItem="{Binding SeletedIOModel,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="IO名称" Binding="{Binding IOName}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="IO类型" Binding="{Binding IOType}" IsReadOnly="True" />
+                                    <DataGridTemplateColumn Header="IO状态">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox Style="{StaticResource IOStyle}" IsChecked="{Binding IOState,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="点位">
+                            <DataGrid Grid.Row="0"  Background="#FFF7F4F4" AutoGenerateColumns="False" CanUserSortColumns="False" CanUserAddRows="False" IsEnabled="{Binding RelativeSource={ RelativeSource  AncestorLevel=1, AncestorType={x:Type Window},Mode=FindAncestor},Path=DataContext.Sysmanger.LoginViewModel.EngineerLv,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                            ColumnWidth="auto"
+                                            ItemsSource="{Binding PointItems}"
+                                            SelectedItem="{Binding SeletedPoint}"
+                                          >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="点位名称" Binding="{Binding PointName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="点位类型" Binding="{Binding PointType,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="点位坐标" Binding="{Binding MovePost}" IsReadOnly="False"/>
+                                </DataGrid.Columns>
+                                <DataGrid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="移动" Command="{Binding MovePointPostCommand}"/>
+                                        <MenuItem Header="示教" Command="{Binding GetPointPostCommand}"/>
+                                    </ContextMenu>
+                                </DataGrid.ContextMenu>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="气缸" DataContext="{Binding CylinderManger,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+                            <DataGrid Grid.Row="0"  Background="#FFF7F4F4" AutoGenerateColumns="False" CanUserSortColumns="False" CanUserAddRows="False" IsEnabled="{Binding RelativeSource={ RelativeSource  AncestorLevel=1, AncestorType={x:Type Window},Mode=FindAncestor},Path=DataContext.Sysmanger.LoginViewModel.EngineerLv,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                            ColumnWidth="auto"
+                                          ItemsSource="{Binding Cylinders,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          SelectedItem="{Binding SeletedCylinder,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="名称" Binding="{Binding Name}" IsReadOnly="True"/>
+                                    <DataGridTemplateColumn Header="原点状态" >
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox  Style="{StaticResource IOStyle}" IsChecked="{Binding HomeStatus}" IsEnabled="False"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="动点状态" >
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox  Style="{StaticResource IOStyle}" IsChecked="{Binding WorkStatus}" IsEnabled="False"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="类型"     Binding="{Binding CylType }" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="原点输入" Binding="{Binding HomeDI}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="动点输入" Binding="{Binding WorkDI}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="原点输出" Binding="{Binding HomeDO}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="动点输出" Binding="{Binding WorkDO}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="原点禁用" Binding="{Binding EnHomeDI}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="动点禁用" Binding="{Binding EnWorkDI}" IsReadOnly="True"/>
+                                </DataGrid.Columns>
+                                <DataGrid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="回原点" Command="{Binding GoHomeCommand}"/>
+                                        <MenuItem Header="去动点" Command="{Binding GoWorkCommand}"/>
+                                    </ContextMenu>
+                                </DataGrid.ContextMenu>
+                            </DataGrid>
+                        </TabItem>
+                    </TabControl>
+
+                </GroupBox>
+                <GroupBox Header="日志" Grid.Row="1" Margin="5">
+                    <RichTextBox Name="txtbox_showLog" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Center" Cursor="Arrow"/>
+                </GroupBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3" 
+              Background="{Binding StateBackground,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+            <ProgressBar Background="Transparent" 
+                         Value="{Binding BarValue,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Height="30"/>
+            <Label Content="{Binding StateText,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label VerticalAlignment="Center">
+                    设备状态：
+                </Label>
+                <Label  Content="{Binding CurrentState}" VerticalAlignment="Center"/>
+                <Label VerticalAlignment="Center">
+                    当前用户：
+                </Label>
+                <Label Content="管理员"    VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

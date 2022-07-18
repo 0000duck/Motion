@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net48</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="log4net" Version="2.0.14" />
+	  <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Tanac.Controls\Tanac.Controls.csproj" />
+	  <ProjectReference Include="..\Tanac.Utils\Tanac.Utils.csproj" />
+	</ItemGroup>
+</Project>

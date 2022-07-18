@@ -1,0 +1,141 @@
+
+----------------------application startup--------------------------
+2022-06-07 21:23:19:204 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-07 21:25:27:613 --INFO -- 软件启动成功！
+2022-06-07 21:25:44:924 --INFO -- Unknown change state to Stop
+2022-06-07 21:25:48:144 --INFO -- Stop change state to Homing
+2022-06-07 21:25:52:603 --INFO -- Homing change state to Ready
+2022-06-07 21:26:02:934 --INFO -- Ready change state to Running
+2022-06-07 21:26:08:780 --INFO -- Running change state to Stop
+2022-06-07 21:26:51:480 --INFO -- Stop change state to Homing
+2022-06-07 21:26:55:814 --INFO -- Homing change state to Ready
+2022-06-07 21:26:58:553 --INFO -- Ready change state to Running
+2022-06-07 21:27:24:752 --INFO -- Running change state to Stop
+2022-06-07 21:27:30:010 --INFO -- Stop change state to Homing
+2022-06-07 21:27:34:328 --INFO -- Homing change state to Ready
+2022-06-07 21:27:36:427 --INFO -- Ready change state to Running
+2022-06-07 21:28:34:524 --INFO -- Running change state to Pause
+2022-06-07 21:28:36:207 --INFO -- Pause change state to Running
+2022-06-07 21:28:37:359 --INFO -- Running change state to Pause
+2022-06-07 21:28:38:566 --INFO -- Pause change state to Running
+2022-06-07 21:28:39:738 --INFO -- Running change state to Pause
+2022-06-07 21:28:40:804 --INFO -- Pause change state to Running
+2022-06-07 21:28:43:004 --INFO -- Running change state to Pause
+2022-06-07 21:28:49:982 --INFO -- Pause change state to Running
+2022-06-07 21:28:51:131 --INFO -- Running change state to Pause
+2022-06-07 21:28:52:422 --INFO -- Pause change state to Running
+2022-06-07 21:28:53:514 --INFO -- Running change state to Pause
+2022-06-07 21:28:54:915 --INFO -- Pause change state to Running
+2022-06-07 21:28:57:066 --INFO -- Running change state to Pause
+2022-06-07 21:28:58:249 --INFO -- Pause change state to Running
+2022-06-07 21:28:59:352 --INFO -- Running change state to Pause
+2022-06-07 21:29:01:011 --INFO -- Pause change state to Running
+2022-06-07 21:29:02:145 --INFO -- Running change state to Pause
+2022-06-07 21:29:04:152 --INFO -- Pause change state to Running
+2022-06-07 21:29:06:394 --INFO -- Running change state to Pause
+2022-06-07 21:29:07:252 --INFO -- Pause change state to Running
+2022-06-07 21:29:08:384 --INFO -- Running change state to Pause
+2022-06-07 21:29:09:961 --INFO -- Pause change state to Running
+2022-06-07 21:29:11:063 --INFO -- Running change state to Pause
+2022-06-07 21:29:12:093 --INFO -- Pause change state to Running
+2022-06-07 21:29:14:324 --INFO -- Running change state to Pause
+2022-06-07 21:29:15:482 --INFO -- Pause change state to Running
+2022-06-07 21:29:16:618 --INFO -- Running change state to Pause
+2022-06-07 21:29:18:192 --INFO -- Pause change state to Running
+2022-06-07 21:29:19:308 --INFO -- Running change state to Pause
+2022-06-07 21:29:21:653 --INFO -- Pause change state to Running
+2022-06-07 21:29:23:869 --INFO -- Running change state to Pause
+2022-06-07 21:29:24:906 --INFO -- Pause change state to Running
+2022-06-07 21:29:26:060 --INFO -- Running change state to Pause
+2022-06-07 21:29:28:151 --INFO -- Pause change state to Running
+2022-06-07 21:29:29:244 --INFO -- Running change state to Pause
+2022-06-07 21:29:30:359 --INFO -- Pause change state to Running
+2022-06-07 21:29:32:597 --INFO -- Running change state to Pause
+2022-06-07 21:30:04:488 --INFO -- Pause change state to Running
+2022-06-07 21:30:10:093 --INFO -- Running change state to Stop
+2022-06-07 21:30:19:177 --INFO -- Stop change state to Homing
+2022-06-07 21:30:23:562 --INFO -- Homing change state to Ready
+2022-06-07 21:31:09:421 --INFO -- Ready change state to Homing
+2022-06-07 21:31:22:453 --INFO -- Homing change state to Ready
+2022-06-07 21:31:58:629 --INFO -- Ready change state to Stop
+2022-06-07 21:57:30:362 --INFO -- Stop change state to Homing
+2022-06-07 21:57:34:727 --INFO -- Homing change state to Ready
+2022-06-07 21:57:47:093 --INFO -- Ready change state to Running
+2022-06-07 21:57:49:254 --INFO -- Running change state to Pause
+2022-06-07 21:57:51:211 --INFO -- Pause change state to Running
+2022-06-07 21:57:52:341 --INFO -- Running change state to Pause
+2022-06-07 21:57:53:328 --INFO -- Pause change state to Running
+2022-06-07 21:57:54:421 --INFO -- Running change state to Pause
+2022-06-07 21:57:55:299 --INFO -- Pause change state to Running
+2022-06-07 21:57:57:476 --INFO -- Running change state to Pause
+2022-06-07 21:57:58:337 --INFO -- Pause change state to Running
+2022-06-07 21:57:59:442 --INFO -- Running change state to Pause
+2022-06-07 21:58:02:944 --INFO -- Pause change state to Running
+2022-06-07 21:58:04:051 --INFO -- Running change state to Pause
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-07 22:47:36:944 --INFO -- 软件启动成功！
+2022-06-07 22:49:13:775 --INFO -- Unknown change state to Homing
+2022-06-07 22:49:18:085 --INFO -- Homing change state to Ready
+2022-06-07 22:49:21:001 --INFO -- Ready change state to Running
+2022-06-07 22:49:23:247 --INFO -- Running change state to Pause
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-07 22:52:44:695 --INFO -- 软件启动成功！
+2022-06-07 22:56:33:226 --INFO -- Unknown change state to Homing
+2022-06-07 22:56:37:594 --INFO -- Homing change state to Ready
+2022-06-07 22:56:38:957 --INFO -- Ready change state to Running
+2022-06-07 22:56:40:842 --INFO -- Running change state to Stop
+2022-06-07 22:56:44:275 --INFO -- Stop change state to Homing
+2022-06-07 22:56:48:623 --INFO -- Homing change state to Ready
+2022-06-07 22:56:50:264 --INFO -- Ready change state to Running
+2022-06-07 22:57:45:363 --INFO -- Running change state to Stop
+2022-06-07 22:57:47:347 --INFO -- Stop change state to Homing
+2022-06-07 22:57:51:683 --INFO -- Homing change state to Ready
+2022-06-07 22:58:05:588 --INFO -- Ready change state to Homing
+2022-06-07 22:58:09:966 --INFO -- Homing change state to Ready
+2022-06-07 22:58:11:090 --INFO -- Ready change state to Homing
+2022-06-07 22:58:15:480 --INFO -- Homing change state to Ready
+2022-06-07 22:58:17:525 --INFO -- Ready change state to Homing
+2022-06-07 22:58:21:894 --INFO -- Homing change state to Ready
+2022-06-07 22:58:29:890 --INFO -- Ready change state to Homing
+2022-06-07 22:58:34:229 --INFO -- Homing change state to Ready
+2022-06-07 23:00:33:360 --INFO -- Ready change state to Running
+2022-06-07 23:03:08:389 --INFO -- Running change state to Pause
+2022-06-07 23:03:09:929 --INFO -- Pause change state to Running
+2022-06-07 23:03:12:146 --INFO -- Running change state to Pause
+2022-06-07 23:03:12:763 --INFO -- Pause change state to Running
+2022-06-07 23:03:13:920 --INFO -- Running change state to Pause
+2022-06-07 23:03:14:826 --INFO -- Pause change state to Running
+2022-06-07 23:03:15:996 --INFO -- Running change state to Pause
+2022-06-07 23:08:12:410 --INFO -- Pause change state to Running
+2022-06-07 23:09:53:919 --INFO -- Running change state to Pause
+2022-06-07 23:09:59:567 --INFO -- Pause change state to Running
+2022-06-07 23:10:00:750 --INFO -- Running change state to Pause
+2022-06-07 23:10:08:318 --INFO -- Pause change state to Running
+2022-06-07 23:10:09:470 --INFO -- Running change state to Pause
+2022-06-07 23:10:10:366 --INFO -- Pause change state to Running
+2022-06-07 23:10:12:518 --INFO -- Running change state to Pause
+2022-06-07 23:10:13:161 --INFO -- Pause change state to Running
+2022-06-07 23:10:14:293 --INFO -- Running change state to Pause
+2022-06-07 23:11:45:859 --INFO -- Pause change state to Homing
+2022-06-07 23:11:50:172 --INFO -- Homing change state to Ready
+2022-06-07 23:11:50:888 --INFO -- Ready change state to Running
+2022-06-07 23:11:55:606 --INFO -- Running change state to Homing
+2022-06-07 23:12:01:701 --INFO -- Homing change state to Ready
+2022-06-07 23:12:02:943 --INFO -- Ready change state to Running
+2022-06-07 23:12:20:149 --INFO -- Running change state to Pause
+2022-06-07 23:12:21:877 --INFO -- Pause change state to Stop
+2022-06-07 23:13:44:670 --INFO -- Stop change state to Homing
+2022-06-07 23:13:49:016 --INFO -- Homing change state to Ready
+2022-06-07 23:13:50:788 --INFO -- Ready change state to Running
+2022-06-07 23:13:56:708 --INFO -- Running change state to Homing
+2022-06-07 23:14:01:649 --INFO -- Homing change state to Ready
+
+ ----------------------application shutdown--------------------------

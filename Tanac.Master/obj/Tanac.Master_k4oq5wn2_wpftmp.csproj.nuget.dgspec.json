@@ -1,0 +1,219 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Master\\Tanac.Master.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj",
+        "projectName": "Tanac.Controls",
+        "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj",
+        "packagesPath": "C:\\Users\\zhangyong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhangyong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "MaterialDesignThemes.MahApps": {
+              "target": "Package",
+              "version": "[0.2.2, )"
+            },
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.39, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Core\\Tanac.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Core\\Tanac.Core.csproj",
+        "projectName": "Tanac.Core",
+        "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Core\\Tanac.Core.csproj",
+        "packagesPath": "C:\\Users\\zhangyong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhangyong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {
+              "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj": {
+                "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj"
+              },
+              "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Motion\\Tanac.Motion.csproj": {
+                "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Motion\\Tanac.Motion.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "MvvmLightLibs": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.14, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Master\\Tanac.Master.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Master\\Tanac.Master.csproj",
+        "projectName": "Tanac.Master",
+        "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Master\\Tanac.Master.csproj",
+        "packagesPath": "C:\\Users\\zhangyong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Master\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhangyong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {
+              "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj": {
+                "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Controls\\Tanac.Controls.csproj"
+              },
+              "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Core\\Tanac.Core.csproj": {
+                "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Core\\Tanac.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Motion\\Tanac.Motion.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Motion\\Tanac.Motion.csproj",
+        "projectName": "Tanac.Motion",
+        "projectPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Motion\\Tanac.Motion.csproj",
+        "packagesPath": "C:\\Users\\zhangyong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Motion\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zhangyong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+
+----------------------application startup--------------------------
+2022-06-08 08:08:29:689 --INFO -- Ready change state to Running
+2022-06-08 08:08:32:628 --INFO -- Running change state to Stop
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 08:25:13:921 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 08:41:03:677 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 08:44:02:099 --INFO -- 软件启动成功！
+2022-06-08 08:53:06:660 --INFO -- Unknown change state to Homing
+2022-06-08 08:53:10:974 --INFO -- Homing change state to Ready
+2022-06-08 08:54:03:674 --INFO -- Ready change state to Running
+2022-06-08 08:54:14:389 --INFO -- Running change state to Stop
+
+----------------------application startup--------------------------
+2022-06-08 10:13:48:771 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 10:17:14:808 --INFO -- 软件启动成功！
+2022-06-08 10:18:19:830 --INFO -- Unknown change state to Homing
+2022-06-08 10:18:24:158 --INFO -- Homing change state to Ready
+2022-06-08 10:26:07:308 --INFO -- Ready change state to Homing
+2022-06-08 10:26:11:680 --INFO -- Homing change state to Ready
+2022-06-08 10:28:30:382 --INFO -- Ready change state to Homing
+2022-06-08 10:28:34:974 --INFO -- Homing change state to Ready
+
+----------------------application startup--------------------------
+2022-06-08 10:35:44:788 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 10:36:40:935 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 10:37:08:714 --INFO -- 软件启动成功！
+2022-06-08 10:40:59:911 --INFO -- Unknown change state to Homing
+2022-06-08 10:41:04:247 --INFO -- Homing change state to Ready
+2022-06-08 10:41:08:766 --INFO -- Ready change state to Running
+2022-06-08 10:41:17:611 --INFO -- Running change state to Homing
+2022-06-08 10:41:21:166 --INFO -- Homing change state to Stop
+2022-06-08 10:41:31:203 --INFO -- Stop change state to Homing
+2022-06-08 10:41:35:533 --INFO -- Homing change state to Ready
+2022-06-08 10:43:48:308 --INFO -- Ready change state to Homing
+2022-06-08 10:43:52:646 --INFO -- Homing change state to Ready
+
+----------------------application startup--------------------------
+2022-06-08 11:16:38:751 --INFO -- 软件启动成功！
+2022-06-08 11:20:00:150 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:20:18:618 --INFO -- Unknown change state to Homing
+2022-06-08 11:20:23:005 --INFO -- Homing change state to Ready
+2022-06-08 11:20:25:502 --INFO -- Ready change state to Homing
+2022-06-08 11:20:29:841 --INFO -- Homing change state to Ready
+2022-06-08 11:20:31:805 --INFO -- Ready change state to Running
+2022-06-08 11:20:35:067 --INFO -- Running change state to Pause
+2022-06-08 11:20:35:717 --INFO -- Pause change state to Running
+2022-06-08 11:20:36:843 --INFO -- Running change state to Pause
+2022-06-08 11:20:38:840 --INFO -- Pause change state to Homing
+2022-06-08 11:20:43:153 --INFO -- Homing change state to Ready
+2022-06-08 11:21:38:686 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:21:40:789 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:21:42:268 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:21:47:606 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:21:51:845 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:22:07:429 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:22:09:051 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:22:10:454 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:22:16:085 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:22:17:593 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:22:19:402 --ERROR-- 点位运动失败！平台超极限
+2022-06-08 11:23:46:721 --INFO -- Ready change state to Running
+2022-06-08 11:23:48:926 --INFO -- Running change state to Pause
+2022-06-08 11:24:19:702 --INFO -- Pause change state to Homing
+2022-06-08 11:24:24:082 --INFO -- Homing change state to Ready
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 11:35:30:691 --INFO -- 软件启动成功！
+2022-06-08 11:36:37:091 --INFO -- Unknown change state to Homing
+2022-06-08 11:36:41:467 --INFO -- Homing change state to Ready
+2022-06-08 11:36:42:247 --INFO -- Ready change state to Homing
+2022-06-08 11:36:46:596 --INFO -- Homing change state to Ready
+2022-06-08 11:39:15:720 --INFO -- Ready change state to Stop
+2022-06-08 11:39:19:236 --INFO -- Stop change state to Homing
+2022-06-08 11:39:23:593 --INFO -- Homing change state to Ready
+
+----------------------application startup--------------------------
+2022-06-08 13:17:45:601 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 14:41:06:839 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 14:41:52:124 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 14:44:21:092 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 15:49:22:282 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 15:51:53:101 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 15:57:46:776 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 16:00:44:943 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 16:03:24:619 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 16:05:31:673 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 16:47:54:172 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 16:58:22:105 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 17:55:55:479 --INFO -- 软件启动成功！
+
+----------------------application startup--------------------------
+2022-06-08 18:09:39:925 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------
+
+----------------------application startup--------------------------
+2022-06-08 18:27:28:888 --INFO -- 软件启动成功！
+
+ ----------------------application shutdown--------------------------

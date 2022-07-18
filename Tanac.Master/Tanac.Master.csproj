@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net48</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>logo.ico</ApplicationIcon>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="logo.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Assets\logo.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Tanac.Controls\Tanac.Controls.csproj" />
+	  <ProjectReference Include="..\Tanac.Core\Tanac.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Assets\Images\" />
+	  <Folder Include="Assets\Fonts\" />
+	  <Folder Include="Model\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="logo.ico" />
+	</ItemGroup>
+</Project>

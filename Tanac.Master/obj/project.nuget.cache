@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hn+c78e7iBCbmC3tjC3fpaSRDIFx56HzUBjiQ16nwPSEGnwjQT3KiehK6jlQSvOxV2ssVRo+dO3/XRC0J3sC5Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zhangyong\\Desktop\\2022项目暂放\\运动控制框架研发\\Tanac.Master\\Tanac.Master\\Tanac.Master\\Tanac.Master\\Tanac.Master.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zhangyong\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\controlzex\\4.2.2\\controlzex.4.2.2.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\log4net\\2.0.14\\log4net.2.0.14.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\mahapps.metro\\2.0.0-alpha0748\\mahapps.metro.2.0.0-alpha0748.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\materialdesignthemes.mahapps\\0.2.2\\materialdesignthemes.mahapps.0.2.2.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\zhangyong\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
